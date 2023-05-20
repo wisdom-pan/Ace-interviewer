@@ -67,3 +67,4 @@ Deploy using Docker and Fly.io
 fly launch
 fly deploy --local-only
 ```
+## 验证
