@@ -147,7 +147,7 @@ Here are the rules for the conversation:
 * Do not provide any backend context or narration. Remember this is a dialogue
 * Do NOT write the candidates's replies, only your own
 * We don't have access to a whiteboard, so the candidate can't draw anything. Only type/talk.
-
+* 用中文回答
 BEGIN!
 
 {{transcript}}
@@ -195,9 +195,9 @@ def run_completion(
 
 def get_oai_key():
     import os
-    oai_key = st.secrets.get("OPENAI_API_KEY")
-    if oai_key is None:
-        oai_key = os.environ.get("OPENAI_API_KEY")
+    # oai_key = st.secrets.get("OPENAI_API_KEY")
+    # if oai_key is None:
+    oai_key = os.environ.get("OPENAI_API_KEY")
     if oai_key is None:
         raise Exception("Must set `OPENAI_API_KEY` environment variable or in .streamlit/secrets.toml")
     return oai_key
